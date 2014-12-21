@@ -1,4 +1,4 @@
-# encoding: UTF-8
+git remote add origin https://github.com/Maciej001/Marionette_demo.gitgit push -u origin master# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
