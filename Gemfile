@@ -6,6 +6,8 @@ gem 'rails', '4.1.4'
 gem 'pg'
 gem 'rails_12factor', group: :production
 
+gem 'thin'
+
 gem 'sprockets', '~> 2.12'
 gem 'sass-rails', '~> 5.0.0.beta1'
 gem 'susy'
