@@ -4,6 +4,10 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def index
+
+  	@user = User.first # just assumption
+  	gon.rabl template: "app/views/users/show.json.rabl", as: "current_user"
+
   end
   
 end

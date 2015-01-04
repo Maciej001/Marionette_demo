@@ -7,6 +7,9 @@ gem 'pg'
 gem 'rails_12factor', group: :production
 
 gem 'thin'
+gem 'rabl'
+gem 'oj'
+gem 'gon'
 
 gem 'sprockets', '~> 2.12'
 gem 'sass-rails', '~> 5.0.0.beta1'

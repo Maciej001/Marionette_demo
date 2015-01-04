@@ -9,7 +9,9 @@
 
 <%= javascript_tag do %>
 	$(function() {
-		Demo.start();
+		Demo.start({
+			currentUser: gon.current_user
+		});
 	});
 <% end %>
 

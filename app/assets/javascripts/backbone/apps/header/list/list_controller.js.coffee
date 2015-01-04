@@ -3,17 +3,11 @@
 	List.Controller = 
 
 		listHeader: ->
-			links = @getLinksCollection()
+			# request is serviced by Handler function in entities/header.js.coffee API
+			links = App.request "header:entities"
 
 			headerView = @getHeaderView links
 			App.headerRegion.show headerView
-
-		getLinksCollection: ->
-			new Backbone.Collection [
-				{ name: "Users" }
-				{ name: "Leads" }
-				{ name: "Appointments" }
-			]
 
 		getHeaderView: (links) ->
 			new List.Headers 
