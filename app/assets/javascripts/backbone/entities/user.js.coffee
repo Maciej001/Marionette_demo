@@ -4,10 +4,14 @@
 
 	class Entities.UsersCollection extends Entities.Collection
 		model: Entities.User
-		url: 'users' # so fetch knows from which url it gets the list of users
+
+		# so fetch knows from which url it gets the list of users
+		# Routes.users_path() is delivered thanks to js-routes gem
+		url: -> Routes.users_path() 
 
 		# you can not directly go for users_path helper like in rails 
 		# all routes are available via 'rake routes' in terminal 
+		# instead add "js-routes" gem
 
 	API = 
 		setCurrentUser: (currentUser) ->

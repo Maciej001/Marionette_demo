@@ -1,1 +1,8 @@
-<a href="#"><%= @name %></a>
+<!-- <a href="#<%= @url %>"><%= @name %></a> -->
+<!-- link to is implemented in view/_base/view.js.coffee 
+.eco templates escape html, so if we used <%= %> instead of <%- %>
+we would get instead of nice names in header menu, whole html link as name.
+Not escaping HTML might cause some security issues
+-->
+
+<%- @linkTo @name, @url %>

@@ -1,0 +1,14 @@
+<!-- in Item View Marionette serializes collection.toJSON under @items 
+Still originally it deals with asynchronous fetching of data from the server
+We are instantiating our views before actually users are returned from the server
+Therefore the original call to @items.length returns 0!
+
+So why users showed up in the usersRegion?
+It's because CompositeViews are refreshed on the reset event, that happens 
+when users are fetched from the server. 
+ItemViews are not wired up to the collection events by default nor are they wired up to 
+the model events. 
+So we have to add collectionEvents to our item view and ask it to refresh when
+the collection changes -->
+
+Total Users: <%= @items.length %>

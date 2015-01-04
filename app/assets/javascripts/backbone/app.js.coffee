@@ -2,7 +2,8 @@
 
 	App = new Marionette.Application
 
-	App.rootRoute = "users"
+	App.rootRoute = Routes.users_path() # was 'users' but thks to js-routes we can use 
+	# Rails like routes
 
 	App.on "before:start", (options) ->
 		@currentUser = App.request "set:current:user", options.currentUser

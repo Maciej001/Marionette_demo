@@ -10,6 +10,7 @@ gem 'thin'
 gem 'rabl'
 gem 'oj'
 gem 'gon'
+gem 'js-routes'
 
 gem 'sprockets', '~> 2.12'
 gem 'sass-rails', '~> 5.0.0.beta1'

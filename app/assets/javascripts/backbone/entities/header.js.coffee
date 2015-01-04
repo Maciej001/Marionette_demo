@@ -11,9 +11,9 @@
 	API = 
 		getHeaders: ->
 			new Entities.HeaderCollection [
-				{ name: "Users" }
-				{ name: "Leads" }
-				{ name: "Appointments" }
+				{ name: "Users", url: Routes.users_path() }
+				{ name: "Leads", url: Routes.leads_path() }
+				{ name: "Appointments", "appointments" }
 			]
 
 	App.reqres.setHandler "header:entities", ->
